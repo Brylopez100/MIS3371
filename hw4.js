@@ -452,7 +452,7 @@ var inputs = [
   {id:"email", cookieName: "Email Address"},
   {id:"phone", cookieName: "Phone Number"},
   {id:"uid", cookieName: "User ID"},
-]
+];
 
 inputs.forEach(function (input) {
     var inputElement = document.getElementById(input.id);
@@ -470,7 +470,7 @@ inputs.forEach(function (input) {
 });
 
 var firstName = getCookie("firstName");
-if (firstName !== " ") {
+if (firstName !== "") {
     document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
     document.getElementById("welcome2").innerHTML =
         "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
