@@ -73,7 +73,7 @@ function validateMini() {
 
 // dob validation
 function validateDob() {
-    dob = document.getElementByID("dob");
+    dob = document.getElementById("dob");
     let date = new Date(dob.value);
     let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
 
@@ -305,13 +305,15 @@ function validatePword() {
     errorContainer.innerHTML = errorMessage
     .map((message) => `<span>${message}</span><br/>`)
     .join("");
+
+    return errorMessage.length ===0;
 }
 
 
 // confirm password validation
 function confirmPword() {
-    pword1 = document.getElementById("pword").value;
-    pword2 = document.getElementById("con_pword").value;
+    const pword1 = document.getElementById("pword").value;
+    const pword2 = document.getElementById("con_pword").value;
 
 
     if (pword1 !== pword2) {
