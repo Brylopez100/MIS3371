@@ -437,6 +437,19 @@ function getCookie(name) {
     return "";
 }
 
+var inputs = [
+  {id:"fname", cookieName: "firstName"},
+  {id:"mini", cookieName: "middleInitial"},
+  {id:"lname", cookieName: "lastName"},
+  {id:"dob", cookieName: "dob"},
+  {id:"ssn", cookieName: "ssn"},
+  {id:"address1", cookieName: "address1"},
+  {id:"city", cookieName: "city"},
+  {id:"zcode", cookieName: "zipCode"},
+  {id:"email", cookieName: "email"},
+  {id:"phone", cookieName: "phone"},
+  {id:"uid", cookieName: "userId"},
+
 inputs.forEach(function (input) {
     var inputElement = document.getElementById(input.id);
 
