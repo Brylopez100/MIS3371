@@ -1,0 +1,213 @@
+ /*
+ Program name: hw3.css
+ Author: Bryan Lopez
+ Date created: April 1, 2025
+ Date last edited: April 13, 2025
+ Version: 3.0
+ Description: Homework 3 CSS Patient Form.
+ */
+
+
+ header{
+    width: 100%;
+    background-color: red;
+ }
+
+
+ body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:white;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh; /*page is height of the viewport*/
+ }
+
+
+ form{
+     flex-grow: 1;
+ }
+
+
+ h1,h2{
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+     flex-grow: 1;
+ }
+
+
+ main{
+     text-align: center;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+     flex-grow: 1;
+ }
+
+
+ .image{
+     text-align: left;
+ }
+
+
+ .td1{
+     text-align: right;
+     font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+ }
+
+
+ th{
+    text-align: center;
+    font-family: sans-serif;
+ }
+
+
+ footer{
+    position: flex;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 2.0 rem;
+ }
+
+
+ #footer{
+     text-align: right;
+     font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+     margin-right: 10px;
+ }
+
+
+ label{
+     text-align: right;
+     font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+ }
+
+
+ input{
+     text-align: left;
+     font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+ }
+
+
+ textarea{
+    text-align: left;
+    font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+ }
+
+
+ #today{
+     text-align: left;
+     font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+     margin-right: 5px;
+ }
+
+
+ p{
+     text-align: right;
+     font-family: "optima", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: normal;
+ }
+
+
+ .error {
+    color: red;
+    font-size: 12 px;
+    font-family: sans-serif;
+    font-weight: normal;
+ }
+
+
+ .pword-message {
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: normal;
+    position: relative;
+    left: 100px;
+    background: transparent;
+    padding: 10px;
+    border-spacing: 20 px;
+    color: red
+ }
+
+
+ #review {
+    margin-top: 5px;
+
+
+ }
+
+
+ table.output,
+ tr.output,
+ td.output {
+    width: 500px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: red;
+ }
+ 
+ td.output {
+    width: 500px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-spacing: 2px;
+ }
+
+/* Alert Box */
+#alert-box {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cc0000; 
+    justify-content: center;
+    align-items: center;
+}
+
+#alert-content {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    width: 300px;
+    height: 140px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+#alert-content h4 {
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+#close-alert {
+    background-color: #cc0000; 
+    border-width: 1px;
+    border-style: solid;
+    color: #ff0000; 
+    border-color: #ff3333; 
+    font-size: 15px;
+    font-weight: bold;
+    height: 20px;
+    width: 80px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
