@@ -419,7 +419,7 @@ function validateEverything() {
 
 function setCookie(name, cvalue, expiryDays) {
     var day = new Date();
-    day.setTime(day.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    day.setTime(day.getTime() + (expiryDays*24*60*60*1000));
     var expires = "expires=" + day.toUTCString();
     document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
 }
@@ -436,6 +436,19 @@ function getCookie(name) {
     }
     return "";
 }
+
+var inputs = [
+  {id:"fname", cookieName: "firstName"},
+  {id:"mini", cookieName: "middleInitial"},
+  {id:"lname", cookieName: "lastName"},
+  {id:"dob", cookieName: "dob"},
+  {id:"ssn", cookieName: "ssn"},
+  {id:"address1", cookieName: "address1"},
+  {id:"city", cookieName: "city"},
+  {id:"zcode", cookieName: "zipCode"},
+  {id:"email", cookieName: "email"},
+  {id:"phone", cookieName: "phone"},
+  {id:"uid", cookieName: "userId"},
 
 inputs.forEach(function (input) {
     var inputElement = document.getElementById(input.id);
@@ -466,6 +479,14 @@ if (firstName !== "") {
     });
 }
 
+function deleteAllCookies() {
+    document.cookie.split(";").forEach(function (cookie) {
+        let eqPos = cookie.indexOf("=");
+        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+    });
+}
+
 document.getElementById("remember-me").addEventListener("change", function () {
     const rememberMe = this.checked;
 
@@ -484,14 +505,6 @@ document.getElementById("remember-me").addEventListener("change", function () {
         console.log("Cookies saved because 'Remember Me' is checked.");
     }
 });
-
-function deleteAllCookies() {
-    document.cookie.split(";").forEach(function (cookie) {
-        let eqPos = cookie.indexOf("=");
-        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
-    });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const rememberMe = document.getElementById("remember-me").checked;
