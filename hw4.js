@@ -452,6 +452,7 @@ var inputs = [
   {id:"email", cookieName: "Email Address"},
   {id:"phone", cookieName: "Phone Number"},
   {id:"uid", cookieName: "User ID"},
+]
 
 inputs.forEach(function (input) {
     var inputElement = document.getElementById(input.id);
