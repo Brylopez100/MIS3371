@@ -438,17 +438,20 @@ function getCookie(name) {
 }
 
 var inputs = [
-  {id:"fname", cookieName: "firstName"},
-  {id:"mini", cookieName: "middleInitial"},
-  {id:"lname", cookieName: "lastName"},
-  {id:"dob", cookieName: "dob"},
-  {id:"ssn", cookieName: "ssn"},
-  {id:"address1", cookieName: "address1"},
-  {id:"city", cookieName: "city"},
-  {id:"zcode", cookieName: "zipCode"},
-  {id:"email", cookieName: "email"},
-  {id:"phone", cookieName: "phone"},
-  {id:"uid", cookieName: "userId"},
+  {id:"fname", cookieName: "First Name"},
+  {id:"mini", cookieName: "Middle Initial"},
+  {id:"lname", cookieName: "Last Name"},
+  {id:"pgender", cookieName: "Gender"},
+  {id:"dob", cookieName: "Date of Birth"},
+  {id:"ssn", cookieName: "Social Security Number"},
+  {id:"address1", cookieName: "Address Line 1"},
+  {id:"address2", cookieName: "Address Line 2"},
+  {id:"city", cookieName: "City"},
+  {id:"state", cookieName: "State"},
+  {id:"zcode", cookieName: "Zip Code"},
+  {id:"email", cookieName: "Email Address"},
+  {id:"phone", cookieName: "Phone Number"},
+  {id:"uid", cookieName: "User ID"},
 
 inputs.forEach(function (input) {
     var inputElement = document.getElementById(input.id);
