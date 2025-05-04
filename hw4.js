@@ -466,7 +466,7 @@ inputs.forEach(function (input) {
 });
 
 var firstName = getCookie("firstName");
-if (firstName !== "") {
+if (firstName !== " ") {
     document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
     document.getElementById("welcome2").innerHTML =
         "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
@@ -476,6 +476,14 @@ if (firstName !== "") {
             setCookie(input.cookieName, "", -1);
         });
         location.reload();
+    });
+}
+
+function deleteAllCookies() {
+    document.cookie.split(";").forEach(function (cookie) {
+        let eqPos = cookie.indexOf("=");
+        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
     });
 }
 
@@ -497,14 +505,6 @@ document.getElementById("remember-me").addEventListener("change", function () {
         console.log("Cookies saved because 'Remember Me' is checked.");
     }
 });
-
-function deleteAllCookies() {
-    document.cookie.split(";").forEach(function (cookie) {
-        let eqPos = cookie.indexOf("=");
-        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
-    });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const rememberMe = document.getElementById("remember-me").checked;
