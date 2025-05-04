@@ -8,11 +8,16 @@
  */
 
 
- header{
-    width: 100%;
-    background-color: red;
- }
-
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: red;
+  transition: background-color 0.3s ease;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
  body{
     display: flex;
@@ -65,11 +70,11 @@
 
 
  footer{
-    position: flex;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: white;
-    height: 2.0 rem;
+    height: 2.0rem;
  }
 
 
@@ -119,7 +124,7 @@
 
  .error {
     color: red;
-    font-size: 12 px;
+    font-size: 12px;
     font-family: sans-serif;
     font-weight: normal;
  }
@@ -133,7 +138,7 @@
     left: 100px;
     background: transparent;
     padding: 10px;
-    border-spacing: 20 px;
+    border-spacing: 20px;
     color: red
  }
 
@@ -210,18 +215,6 @@
     margin-top: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
-}
-
-/* 1. Sticky Header with Transition Effect */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: white;
-  transition: background-color 0.3s ease;
-  padding: 15px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 2. Welcome Message Styling */
